@@ -19,12 +19,12 @@
 			{% endblock %}
 		{% endblock %}
 	</head>
-	<body class="bg-black">
-		<nav class="border-gray-200 fixed top-0 w-full bg-[#262626]">
+	<body class="bg-gray-200">
+		<nav class="border-gray-200 fixed top-0 w-full bg-[#262626] z-10">
 			<div class="max-w-screen-2xl flex flex-wrap text-white items-center gap-[10vw] mx-auto p-4">
 				<div class="flex flex-col">
 					<a href="{{ path("app_main") }}">
-						<p class="mb-1 rounded-lg flex gap-2 items-center justify-center">
+						<p class="mb-3 rounded-lg flex gap-2 items-center justify-center">
 							<span class="text-3xl leading-none text-blue-800 font-bold uppercase bg-white rounded-lg p-1">Ya
 							</span>
 							<span class="text-3xl leading-none text-white font-bold uppercase">Concept
@@ -33,9 +33,14 @@
 						</p>
 						{# <span class="text-3xl leading-none text-[#B3A89A] font-semibold uppercase">Ya-Concept-Interieur</span> #}
 					</a>
-					<span class="text-md leading-none font-bold uppercase">Cuisine</span>
-					<span class="text-md leading-none font-bold uppercase">Salle de bain</span>
-					<span class="text-md leading-none font-bold uppercase">Rangement</span>
+					<section class="flex gap-2">
+						<span class="text-md leading-none font-bold uppercase flex items-center">Vente et instalation</span>
+						<article class="flex flex-col border-l border-white pl-2">
+							<span class="text-md leading-none font-bold uppercase">Cuisine</span>
+							<span class="text-md leading-none font-bold uppercase">Salle de bain</span>
+							<span class="text-md leading-none font-bold uppercase">Rangement</span>
+						</article>
+					</section>
 				</div>
 				<button type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden" id="navbar-button">
 					<span class="sr-only">Open main menu</span>
@@ -49,13 +54,16 @@
 							<a href="{{ path("app_main") }}" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-white md:border-0 md:hover:text-black md:p-1 md:hover:duration-700 md:duration-700" {# aria-current="page" #}>Accueil</a>
 						</li>
 						<li>
-							<a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-white md:border-0 md:hover:text-black md:p-1 md:hover:duration-700 md:duration-700">Services</a>
+							<a href="{{ path("app_services") }}" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-white md:border-0 md:hover:text-black md:p-1 md:hover:duration-700 md:duration-700">Services</a>
 						</li>
 						<li>
-							<a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-white md:border-0 md:hover:text-black md:p-1 md:hover:duration-700 md:duration-700">Réalisation cuisine</a>
+							<a href="{{ path("app_cuisines") }}" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-white md:border-0 md:hover:text-black md:p-1 md:hover:duration-700 md:duration-700">Réalisation cuisine</a>
 						</li>
 						<li>
-							<a href="#" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-white md:border-0 md:hover:text-black md:p-1 md:hover:duration-700 md:duration-700">Réalisation salle de bain</a>
+							<a href="{{ path("app_salle_de_bain") }}" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-white md:border-0 md:hover:text-black md:p-1 md:hover:duration-700 md:duration-700">Réalisation salle de bain</a>
+						</li>
+						<li>
+							<a href="{{ path("app_partenaires") }}" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-white md:border-0 md:hover:text-black md:p-1 md:hover:duration-700 md:duration-700">Nos partenaires</a>
 						</li>
 						<li>
 							<a href="{{ path("app_contact") }}" class="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-white md:border-0 md:hover:text-black md:p-1 md:hover:duration-700 md:duration-700">Contact</a>
@@ -65,21 +73,20 @@
 			</div>
 		</nav>
 		{% block body %}{% endblock %}
-		<footer class="bg-white rounded-lg shadow m-4">
+		<footer class="bg-[#262626] rounded-t-lg shadow m-4">
 			<div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-				<span class="text-sm text-gray-500 sm:text-center">© 2024
-					<a href="{{ path("app_main") }}" class="hover:underline">YaConceptInterieur™</a>. All Rights Reserved.
-				</span>
-				<ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">
-					<li>
+				<a href="{{ path("app_main") }}" class="mb-2 rounded-lg flex gap-2 items-center justify-center">
+					<span class="text-3xl leading-none text-blue-800 font-bold uppercase bg-white rounded-lg p-1">Ya
+					</span>
+					<span class="text-3xl leading-none text-white font-bold uppercase">Concept
+					</span>
+					<span class="text-3xl leading-none text-red-600 font-bold uppercase bg-white rounded-lg p-1">Interieur</span>
+				</a>
+				<ul
+					class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">
+					{# <li>
 						<a href="#" class="hover:underline me-4 md:me-6">About</a>
-					</li>
-					<li>
-						<a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-					</li>
-					<li>
-						<a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-					</li>
+					</li> #}
 					<li>
 						<a href="#" class="hover:underline">Contact</a>
 					</li>

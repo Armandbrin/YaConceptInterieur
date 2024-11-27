@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Services
+{% endblock %}
+
+{% block body %}
+	<main class="mt-[22.3vh]">
+		<section class="bg-[#E6E7E1] py-5">
+			<section class="grid grid-cols-4 bg-[#E6E7E1] mx-[10vw]">
+				<article class="flex flex-col items-center justify-center px-[3vw] py-[4vh] border-y border-x border-black bg-[#688580]">
+					<h2 class="text-xl uppercase font-bold">Services</h2>
+				</article>
+				<article class="flex flex-col items-center justify-center px-[3vw] py-[4vh] border-y border-r border-black">
+					<h2 class="text-xl uppercase font-bold mb-5">Conception et installation de cuisines sur mesure</h2>
+					<p class="text-sm mb-10">Nous nous spécialisons dans la conception et l'installation de cuisines sur mesure. Notre équipe peut personnaliser chaque aspect de votre cuisine pour répondre à vos besoins spécifiques.</p>
+				</article>
+				<article class="flex flex-col items-center justify-center px-[3vw] py-[4vh] border-y border-r border-black">
+					<h2 class="text-xl uppercase font-bold mb-5">Rénovation de cuisines existantes</h2>
+					<p class="text-sm mb-10">Si vous cherchez à rénover votre cuisine existante, nous sommes là pour vous aider. Notre expertise en rénovation de cuisines vous garantit un résultat exceptionnel.</p>
+				</article>
+				<article class="flex flex-col items-center justify-center border-y border-r border-black">
+					<img src="{{ asset("./img/image_services_1.webp") }}" alt="">
+				</article>
+				<article class="flex flex-col items-center justify-center border-l border-r border-b border-black">
+					<img src="{{ asset("./img/image_services_2.webp") }}" alt="">
+				</article>
+				<article class="flex flex-col items-center justify-center px-[3vw] py-[4vh] border-r border-b border-black">
+					<h2 class="text-xl uppercase font-bold mb-5">Installation de mobilier de salle de bains</h2>
+					<p class="text-sm mb-10">En plus de nos services de cuisine, nous proposons l'installation de mobilier de salle de bains sur mesure. Transformez votre salle de bains en un espace fonctionnel et esthétique.
+					</p>
+				</article>
+				<article class="flex flex-col items-center justify-center px-[3vw] py-[4vh] border-r border-b border-black">
+					<h2 class="text-xl uppercase font-bold mb-5">Conception de rangements sur mesure</h2>
+					<p class="text-sm mb-10">Besoin de solutions de rangement personnalisées pour votre cuisine ou salle de bains? Nous concevons des rangements sur mesure pour maximiser l'utilisation de l'espace.
+					</p>
+				</article>
+				<article class="flex flex-col items-center justify-center px-[3vw] py-[4vh] border-b border-r border-black">
+					<h2 class="text-xl uppercase font-bold mb-5">Réaménagement d'espaces intérieurs</h2>
+					<p class="text-sm mb-10">Nous offrons des services complets de réaménagement d'espaces intérieurs pour créer des environnements fonctionnels et esthétiques. Transformez votre intérieur selon vos besoins et votre style.
+					</p>
+				</article>
+				<article class="flex flex-col items-center justify-center px-[3vw] py-[4vh] border-x border-b border-black bg-[#ae9074]">
+					<h2 class="text-xl uppercase font-bold">Notre expertise</h2>
+				</article>
+				<article class="flex flex-col items-center justify-center px-[3vw] py-[4vh] border-r border-b border-black">
+					<h2 class="text-xl uppercase font-bold mb-5">Conception personnalisée</h2>
+					<p class="text-sm">Déplacement à domicile avec des échantillons pour créer votre projet sur mesure, selon vos besoins, désirs et budget. Découvrez ensuite le dossier complet dans notre showroom. Nous offrons conception, installation et rénovation complètes avec des fournisseurs locaux.</p>
+				</article>
+				<article class="flex flex-col items-center justify-center px-[3vw] py-[4vh] border-r border-b border-black">
+					<h2 class="text-xl uppercase font-bold mb-5">Installation professionnelle</h2>
+					<p class="text-sm mb-10">Notre équipe assure
+						<br>
+						une installation professionnelle et méticuleuse pour garantir un résultat impeccable. Chaque détail est pris en compte pour une finition de haute qualité.</p>
+				</article>
+				<article class="flex flex-col items-center justify-center px-[3vw] py-[4vh] border-r border-b border-black">
+					<h2 class="text-xl uppercase font-bold mb-5">Service
+						<br>
+						après-vente</h2>
+					<p class="text-sm mb-10">Satisfaction garantie</p>
+				</article>
+			</section>
+		</section>
+	</main>
+{% endblock %}
